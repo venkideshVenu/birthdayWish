@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Ultimate Birthday Roast!</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background-parallax"></div>
+  
+  <div class="container">
+    <!-- Birthday Sound -->
+    <audio id="birthday-song" src="assets/music.mp3"></audio>
+    <button id="sound-toggle" class="sound-button">🔈 Play Birthday Music</button>
+    
+    <!-- Roast Header -->
+    <header class="roast-header">
+      <h1 class="glitch" data-text="Happy Birthday, Lazy Legend!">
+        Happy Birthday, <span class="highlight">Jayasankar</span>!
+      </h1>
+      <p class="subtitle">Professional Procrastinator & Clash of Clans Addict 🎮</p>
+      <div class="birthday-countdown">
+        <span id="age-counter">0</span> years of legendary laziness!
+      </div>
+    </header>
+
+    <!-- Image Gallery Section -->
+    <section class="image-gallery">
+      <div class="gallery-container">
+        <img src="assets/1.jpg" id="profile-img" class="gallery-image" alt="Profile Picture">
+        <img src="assets/2.jpg" id="gaming-img" class="gallery-image" alt="Gaming Moment">
+        <img src="assets/3.jpg" id="sleep-img" class="gallery-image" alt="Sleeping Picture">
+        <img src="assets/4.jpg" id="birthday-img" class="gallery-image" alt="Birthday Shot">
+      </div>
+    </section>
+
+    <!-- CoC Animation Section -->
+    <section class="coc-animation">
+      <div class="troop-container">
+        <div class="troop barbarian"></div>
+        <div class="troop archer"></div>
+        <div class="troop giant"></div>
+      </div>
+      <div class="trophy-count">
+        <span class="trophy-icon">🏆</span>
+        <span id="trophy-counter">0</span>
+      </div>
+    </section>
+
+    <!-- Roast Sections -->
+    <div class="roast-sections">
+      <section class="roast-card sleep-roast">
+        <h2>Sleep Champion Awards 🏆</h2>
+        <div class="roast-content">
+          <p>Breaking News: Local Human Discovers New World Record in Professional Napping!</p>
+          <ul class="roast-list">
+            <li>Hours Slept: Literally Everything</li>
+            <li>Productivity: Negative Infinity</li>
+            <li>Study Time: 0.00000001%</li>
+            <li>Sleep Quality: Better Than Meditation</li>
+          </ul>
+          <div class="sleep-meter-container">
+            <span>Sleep Level:</span>
+            <div class="sleep-meter">
+              <div class="sleep-meter-fill"></div>
+            </div>
+            <span>God Tier</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="roast-card game-roast">
+        <h2>Clash of Clans Addiction Level 📱</h2>
+        <div class="roast-content">
+          <p>When your village is more organized than your life:</p>
+          <div class="addiction-meter">
+            <div class="meter-fill"></div>
+          </div>
+          <span class="addiction-level">MAXIMUM OVERDRIVE</span>
+          <div class="coc-stats">
+            <div class="stat">
+              <span class="stat-label">Hours Played:</span>
+              <span class="stat-value">25/24</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">Village Level:</span>
+              <span class="stat-value">Legendary</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">Real Life:</span>
+              <span class="stat-value">Loading...</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="roast-card study-roast">
+        <h2>Academic Achievement Museum 📚</h2>
+        <div class="roast-content">
+          <p>Exhibits:</p>
+          <ul class="roast-list">
+            <li>Most Creative Excuse: "The Dog Ate My Homework"</li>
+            <li>Least Time Spent Studying: World Record Holder</li>
+            <li>Homework Avoidance Skills: PhD Level</li>
+            <li>Assignment Speedrun: 5 Minutes Before Deadline</li>
+          </ul>
+          <div class="study-meter-container">
+            <span>Study Motivation:</span>
+            <div class="study-meter">
+              <div class="study-meter-fill"></div>
+            </div>
+            <span>Error 404: Not Found</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Interactive Quiz Section -->
+    <section class="quiz-section">
+      <h2>How Well Do You Know Jayasankar?</h2>
+      <div class="quiz-container">
+        <div class="quiz-question" id="question-1">
+          <p>What's more likely to wake Jayasankar up?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false">An alarm clock</button>
+            <button class="quiz-option" data-correct="false">The smell of food</button>
+            <button class="quiz-option" data-correct="true">Clash of Clans notification</button>
+          </div>
+        </div>
+        <div class="quiz-result hidden">
+          <h3>That's right! 🎮</h3>
+          <p>Only a Clash of Clans raid notification has the power to break through his legendary sleep!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roast Button Section -->
+    <div class="roast-button-container">
+      <button id="epic-roast-btn" class="pixel-button">
+        Unleash Ultimate Roast!
+      </button>
+      <div id="roast-reveal" class="hidden roast-popup">
+        <h3>🔥 ULTIMATE ROAST ACTIVATED 🔥</h3>
+        <p id="custom-roast-text"></p>
+        <button id="another-roast-btn" class="secondary-button">Another Roast!</button>
+      </div>
+    </div>
+
+    <!-- Birthday Wishes Wall -->
+    <section class="birthday-wishes">
+      <h2>Birthday Wishes Wall</h2>
+      <div class="wishes-container">
+        <div class="wish-card">
+          <p>"Happy birthday to the only person who can sleep through an earthquake but wakes up for CoC notifications!"</p>
+          <span class="wish-author">- Your Best Friend</span>
+        </div>
+        <div class="wish-card">
+          <p>"May your birthday be as awesome as your excuse for not studying!"</p>
+          <span class="wish-author">- Your Classmate</span>
+        </div>
+        <div class="wish-card">
+          <p>"Happy Birthday! This year, I hope your Town Hall gets upgraded faster than your grades!"</p>
+          <span class="wish-author">- Your Gaming Buddy</span>
+        </div>
+      </div>
+      <button id="add-wish-btn" class="secondary-button">Add Your Wish</button>
+      <div id="wish-form" class="hidden">
+        <textarea id="wish-text" placeholder="Write your birthday wish here..."></textarea>
+        <input type="text" id="wish-author" placeholder="Your name">
+        <button id="submit-wish-btn" class="secondary-button">Submit Wish</button>
+      </div>
+    </section>
+
+    <!-- Appreciation Section -->
+    <section class="appreciation-section">
+      <div class="heart-animation">❤️</div>
+      <h2>But Seriously... 🤍</h2>
+      <p>Despite all the jokes, you're an epic friend who always brings laughter and fun! Your laid-back attitude makes every moment chill, and your gaming skills (even if they consume your life) are actually impressive. Happy Birthday to someone who knows how to enjoy life at their own pace!</p>
+      <div class="genuine-wishes">
+        <p>Wishing you:</p>
+        <ul>
+          <li>Epic gaming victories</li>
+          <li>Legendary naps</li>
+          <li>Just enough academic success</li>
+          <li>And all the happiness in the world!</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <div class="floating-gift" id="floating-gift">🎁</div>
+  <canvas id="roast-confetti"></canvas>
+  <canvas id="particle-canvas"></canvas>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
