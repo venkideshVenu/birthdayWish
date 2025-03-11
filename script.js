@@ -284,68 +284,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Floating Gift Interaction
-  const floatingGift = document.getElementById('floating-gift');
-  
-  floatingGift.addEventListener('click', () => {
-    // Explosion animation
-    gsap.to(floatingGift, {
-      scale: 2,
-      opacity: 0,
-      duration: 0.5,
-      onComplete: () => {
-        // Reset and restart animation
-        gsap.set(floatingGift, {
-          scale: 1,
-          opacity: 1,
-          bottom: -50,
-          right: Math.random() * (window.innerWidth - 100) + 50
-        });
-      }
-    });
-    
-    // Massive confetti explosion
-    confetti({
-      particleCount: 200,
-      spread: 160,
-      origin: { 
-        x: floatingGift.getBoundingClientRect().left / window.innerWidth,
-        y: floatingGift.getBoundingClientRect().top / window.innerHeight
-      }
-    });
-    
-    // Display a random special message
-    const specialMessages = [
-      "Extra birthday power unlocked! 🎂",
-      "You found a secret gift! 🎁",
-      "Special birthday bonus activated! 🎉",
-      "Achievement unlocked: Gift Finder! 🏆"
-    ];
-    
-    const message = specialMessages[Math.floor(Math.random() * specialMessages.length)];
-    
-    // Create floating message
-    const floatingMessage = document.createElement('div');
-    floatingMessage.textContent = message;
-    floatingMessage.style.position = 'fixed';
-    floatingMessage.style.left = `${floatingGift.getBoundingClientRect().left}px`;
-    floatingMessage.style.top = `${floatingGift.getBoundingClientRect().top - 50}px`;
-    floatingMessage.style.background = 'rgba(255, 215, 0, 0.9)';
-    floatingMessage.style.color = 'black';
-    floatingMessage.style.padding = '10px 15px';
-    floatingMessage.style.borderRadius = '5px';
-    floatingMessage.style.fontWeight = 'bold';
-    floatingMessage.style.zIndex = '100';
-    document.body.appendChild(floatingMessage);
-    
-    // Animate and remove message
-    gsap.to(floatingMessage, {
-      y: -100,
-      opacity: 0,
-      duration: 2,
-      onComplete: () => floatingMessage.remove()
-    });
-  });
 
   // Playful Animations for Roast Cards
   gsap.from('.roast-card', {
