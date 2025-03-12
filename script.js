@@ -85,12 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "Your Clash of Clans base is better defended than your excuses for not studying! 🎮",
     "The only thing that loads slower than your assignments is your motivation to do them! 📚",
     "You have two alarms - one for waking up and another for when Clash of Clans events start! 🔔",
-    "Scientists study your ability to procrastinate as the 8th wonder of the world! ⏰",
-    "Your bed has a permanent imprint of your body at this point! 🛌",
-    "If laziness burned calories, you'd be an Olympic athlete by now! 🏆",
-    "Your gaming skills are inversely proportional to your studying skills! 📊",
     "You don't chase dreams, you hibernate with them! 💤",
-    "Your professors think you're a myth because they've seen you less than Bigfoot! 👣"
   ];
   
   function getRandomRoast() {
